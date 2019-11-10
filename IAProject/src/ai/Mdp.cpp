@@ -92,12 +92,6 @@ Mdp::Mdp() : cicle_end(false), gamma(1), theta(0.5){
 	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::DR, GameUtils::command::LEFT), make_tuple(0.667, State::GO, -10)));
 }
 
-/*
-void Mdp::updateMDP(probabilità){
-
-}
-*/
-
 bool Mdp::valueIterationAlgorithm(){
 	if (checking_delta())	cicle_end = true;
 	if (!cicle_end)	updateValueIteration();
@@ -128,13 +122,12 @@ void Mdp::updateValueIteration(){
 				int s_next, r;
 				tie(p, s_next, r) = it->second;
 				sum[j] += p * (r + gamma * V.at(s_next));
-				//cout << "p: " << p << " s_next: " << s_next << " r : " << r << endl;
 			}
 		}
 		i->second = max(max(sum[0], sum[1]) , sum[2]);	//update V[s]
 		Delta[s] = min(Delta[s], abs(V_old[s] - V[s]));
-		cout << "V(" << i->first << ") : " << i->second << endl;
-		cout << "Delta(" << s << ") : " << Delta[s] << endl;
+		//cout << "V(" << i->first << ") : " << i->second << endl;
+		//cout << "Delta(" << s << ") : " << Delta[s] << endl;
 	}
 }
 
@@ -151,10 +144,9 @@ void Mdp::createPolicy(){
 				int s_next, r;
 				tie(p, s_next, r) = it->second;
 				sum[j] += p * (r + gamma * V.at(s_next));
-				//cout << "p: " << p << " s_next: " << s_next << " r : " << r << endl;
 			}
 		}
-		///////
+
 		int aMax;
 		if (sum[0] > sum[1] && sum[0] > sum[2]){
 			aMax = a[0];
@@ -165,10 +157,7 @@ void Mdp::createPolicy(){
 				aMax = a[2];
 			}
 		}
-		cout <<" " << sum[0] <<" " << sum[1] <<" " << sum[2] << endl;
-		///////
 		policy[s] = aMax;
-		cout << "policy[" << s << "] = " << policy[s] << endl;
 	}
 }
 

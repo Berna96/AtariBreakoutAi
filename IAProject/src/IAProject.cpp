@@ -145,7 +145,7 @@ int main()
 				}
         	}
         	board->setCurrentState(currentState);
-        	cout << "Current State: " << currentState << endl;
+        	//cout << "Current State: " << currentState << endl;
         	if (GameUtils::BRICK != "NONE"){
 				objects.erase(GameUtils::BRICK);
 				GameUtils::count_brick++;

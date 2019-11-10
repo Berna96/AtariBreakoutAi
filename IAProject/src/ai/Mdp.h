@@ -16,7 +16,6 @@ namespace ai {
 
 class Mdp {
 private:
-	//tuple<int, float, int, int> entry;
 	multimap<tuple<int, int>, tuple< float, int, int>> mdp;	//(s, a, p, s', r)
 	map<int, float> V;	//s-->V(s)
 	map<int, float> V_old;	//s-->V_old(s)
@@ -32,7 +31,6 @@ private:
 public:
 	enum State {C, UL, UR, DL, DR, GO};
 	Mdp();
-	//void updateMDP(/*probabilità*/);
 	bool valueIterationAlgorithm();
 	int getCommandFromPolicy(int);
 	virtual ~Mdp();
