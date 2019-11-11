@@ -16,7 +16,7 @@ using namespace std;
 
 namespace ai {
 
-Mdp::Mdp() : cicle_end(false), gamma(1), theta(0.5){
+Mdp::Mdp() : cicle_end(false), gamma(1), theta(0.1){
 	a[0] = GameUtils::command::LEFT;
 	a[1] = GameUtils::command::STOP;
 	a[2] = GameUtils::command::RIGHT;
