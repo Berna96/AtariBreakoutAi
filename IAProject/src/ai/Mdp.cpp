@@ -16,7 +16,7 @@ using namespace std;
 
 namespace ai {
 
-Mdp::Mdp() : V_old(0.0), Delta(0.0), cicle_end(false), gamma(1), theta(0.1){
+Mdp::Mdp() : V_old(0.0), Delta(std::numeric_limits<float>::max()), cicle_end(false), gamma(1), theta(0.1){
 	a[0] = GameUtils::command::LEFT;
 	a[1] = GameUtils::command::STOP;
 	a[2] = GameUtils::command::RIGHT;
@@ -95,6 +95,7 @@ bool Mdp::valueIterationAlgorithm(){
 }
 
 void Mdp::updateValueIteration(){
+	cout << "inizio iterazione" << endl;
 	Delta = 0.0;
 	map<int, float>::iterator i;
 	for (i = V.begin(); i!=V.end(); i++){
@@ -113,9 +114,10 @@ void Mdp::updateValueIteration(){
 		}
 		i->second = max(max(sum[0], sum[1]) , sum[2]);	//update V[s]
 		Delta = max(Delta, abs(V_old - V[s]));
-		//cout << "V(" << i->first << ") : " << i->second << endl;
-		//cout << "Delta(" << s << ") : " << Delta[s] << endl;
+
+		cout << "V(" << i->first << ") : " << i->second << endl;
 	}
+	cout << "fine iterazione" << endl;
 }
 
 void Mdp::createPolicy(){
@@ -145,7 +147,9 @@ void Mdp::createPolicy(){
 			}
 		}
 		policy[s] = aMax;
+		cout << "Policy[" << s << "] = " << policy[s] << endl;
 	}
+
 }
 
 int Mdp::getCommandFromPolicy(int current_State){

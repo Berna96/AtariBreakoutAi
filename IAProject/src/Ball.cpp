@@ -12,9 +12,13 @@
 #include <cmath>
 #include <SFML/Graphics.hpp>
 #include <iostream>
+using namespace std;
 
-Ball::Ball() : ball(nullptr), ray(10.f), speed(Vector2f(-70
-		, -100)), pos(Vector2u(540 - 10, 680-20-10 -1)){
+Ball::Ball() : ball(nullptr), ray(10.f), pos(Vector2u(540 - 10, 680-20-10 -1)){
+	 std::srand(time(0));
+	 int sign = rand() % 2;
+	 if (sign == 0) sign = -1;
+	 speed = Vector2f(sign * 70, -100);
 	 ball = new CircleShape(ray);
 	 ball->setPointCount(10);
 	 ball->setFillColor(Color::White);
