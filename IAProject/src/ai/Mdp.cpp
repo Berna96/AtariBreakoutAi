@@ -37,20 +37,19 @@ Mdp::Mdp() : V_old(0.0), Delta(std::numeric_limits<float>::max()), cicle_end(fal
 	policy[State::GO] = a[1];
 
 	/*0-center --> stop*/
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.027027, State::C, 0)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.243243, State::DL, -1)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.243243, State::DR, -1)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.243243, State::UR, -0.5)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.243243, State::UL, -0.5)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.0526315, State::C, 0)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.236842, State::DL, -1)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.236842, State::DR, -1)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.236842, State::UR, -0.5)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.236842, State::UL, -0.5)));
 	//0-center --> left
 	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::LEFT), make_tuple(0.45, State::UR, -0.5)));
 	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::LEFT), make_tuple(0.1, State::C, 0)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::LEFT), make_tuple(0.45, State::DR, -0.5)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::LEFT), make_tuple(0.45, State::DR, -1)));
 	//0-center --> right
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::RIGHT), make_tuple(0.225, State::UL, -0.5)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::RIGHT), make_tuple(0.05, State::C, 0)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::RIGHT), make_tuple(0.225, State::DL, -1)));
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::RIGHT), make_tuple(0.45, State::GO, -10)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::RIGHT), make_tuple(0.45, State::UL, -0.5)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::RIGHT), make_tuple(0.1, State::C, 0)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::RIGHT), make_tuple(0.45, State::DL, -1)));
 	//1-up-left --> stop
 	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::UL, GameUtils::command::STOP), make_tuple(1, State::UL, -1)));
 	//1-up-left --> left
@@ -59,7 +58,7 @@ Mdp::Mdp() : V_old(0.0), Delta(std::numeric_limits<float>::max()), cicle_end(fal
 	//1-up-left --> right
 	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::UL, GameUtils::command::RIGHT), make_tuple(1, State::UL, -1)));
 	//2-up-right --> stop
-	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::UR, GameUtils::command::STOP), make_tuple(1, State::UR, 0)));
+	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::UR, GameUtils::command::STOP), make_tuple(1, State::UR, -1)));
 	//2-up-right --> left
 	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::UR, GameUtils::command::LEFT), make_tuple(1, State::UR, -1)));
 	//2-up-right --> right
