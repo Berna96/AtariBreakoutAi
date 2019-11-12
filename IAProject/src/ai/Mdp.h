@@ -18,15 +18,13 @@ class Mdp {
 private:
 	multimap<tuple<int, int>, tuple< float, int, int>> mdp;	//(s, a, p, s', r)
 	map<int, float> V;	//s-->V(s)
-	map<int, float> V_old;	//s-->V_old(s)
-	map<int, float> Delta;	//s-->Delta(s)
+	float V_old, Delta;
 	map<int, int> policy;	//s-->a
 	int a[3];
 	bool cicle_end;
 	float gamma, theta;
 	void updateValueIteration();
 	void createPolicy();
-	bool checking_delta();
 
 public:
 	enum State {C, UL, UR, DL, DR, GO};

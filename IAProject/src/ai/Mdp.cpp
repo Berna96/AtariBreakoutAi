@@ -16,23 +16,18 @@ using namespace std;
 
 namespace ai {
 
-Mdp::Mdp() : cicle_end(false), gamma(1), theta(0.1){
+Mdp::Mdp() : V_old(0.0), Delta(0.0), cicle_end(false), gamma(1), theta(0.1){
 	a[0] = GameUtils::command::LEFT;
 	a[1] = GameUtils::command::STOP;
 	a[2] = GameUtils::command::RIGHT;
 
 
-	V[State::C] = V_old[State::C] = 0.0;
-	V[State::UL] = V_old[State::UL] = 0.0;
-	V[State::UR] = V_old[State::UR] = 0.0;
-	V[State::DL] = V_old[State::DL] = 0.0;
-	V[State::DR] = V_old[State::DR] = 0.0;
-	V[State::GO] = V_old[State::GO] = 0.0;
-
-	//Setting to INFINITY
-	Delta[State::C] = Delta[State::UL] = Delta[State::UR] =
-	Delta[State::DL] = Delta[State::DR] = Delta[State::GO] =
-	numeric_limits<float>::max();
+	V[State::C] = 0.0;
+	V[State::UL] = 0.0;
+	V[State::UR] = 0.0;
+	V[State::DL] = 0.0;
+	V[State::DR] = 0.0;
+	V[State::GO] = 0.0;
 
 	policy[State::C] = a[1];
 	policy[State::UL] = a[1];
@@ -93,26 +88,18 @@ Mdp::Mdp() : cicle_end(false), gamma(1), theta(0.1){
 }
 
 bool Mdp::valueIterationAlgorithm(){
-	if (checking_delta())	cicle_end = true;
+	if (Delta < theta)	cicle_end = true;
 	if (!cicle_end)	updateValueIteration();
 	else createPolicy();
 	return cicle_end;
 }
 
-bool Mdp::checking_delta(){
-	bool c = true;
-	for (map<int, float>::iterator i = Delta.begin();
-			i!= Delta.end(); i++){
-		c = c && (Delta[i->first] < theta);
-	}
-	return c;
-}
-
 void Mdp::updateValueIteration(){
+	Delta = 0.0;
 	map<int, float>::iterator i;
 	for (i = V.begin(); i!=V.end(); i++){
 		int s = i->first;
-		V_old[s] = V[s];
+		V_old = V[s];
 		float sum[3] = {0,0,0};	//sum[i] assciato a a[i]
 		for (int j=0; j<3; j++){
 			typedef std::multimap<tuple<int, int>, tuple< float, int, int>>::iterator MMAPIterator;
@@ -125,7 +112,7 @@ void Mdp::updateValueIteration(){
 			}
 		}
 		i->second = max(max(sum[0], sum[1]) , sum[2]);	//update V[s]
-		Delta[s] = min(Delta[s], abs(V_old[s] - V[s]));
+		Delta = max(Delta, abs(V_old - V[s]));
 		//cout << "V(" << i->first << ") : " << i->second << endl;
 		//cout << "Delta(" << s << ") : " << Delta[s] << endl;
 	}
