@@ -3,4 +3,4 @@ Se non viene visualizzata la schermata iniziale, premere P per giocare o C per f
 Per la compilazione è necessario un compilatore per C++, scaricare SFML e seguire le istruzione per il linking della librerie.
 https://github.com/Peplow/SFML-and-Eclipse
 Il link fa riferimento alla compilazione su Eclipse, ma rimane in generale utile per i vari library linking.
-Ho riportato il report della policy e delle iterazioni che l'algoritmo esegue
+Ho riportato il report della policy e delle iterazioni che l'algoritmo esegue.
