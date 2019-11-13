@@ -1,4 +1,4 @@
-Eseguibile compilato su architettura x86_64 Windows 10. Per eseguire il programma, copiare la cartella Release e ARIAL.TTF (serve per il testo).
+Eseguibile compilato su architettura x86_64 Windows 10. Per eseguire il programma, copiare la cartella Release e ARIAL.TTF (serve per il testo). Non ingrandire a schermo intero (funziona, ma le forme non si adattano e si verifica lo stretching).
 Se non viene visualizzata la schermata iniziale, premere P per giocare o C per farlo giocare all'IA.
 Per la compilazione è necessario un compilatore per C++, scaricare SFML e seguire le istruzione per il linking della librerie.
 https://github.com/Peplow/SFML-and-Eclipse
