@@ -16,11 +16,42 @@ using namespace std;
 
 namespace ai {
 
-Mdp::Mdp() : V_old(0.0), Delta(std::numeric_limits<float>::max()), cicle_end(false), gamma(1), theta(0.1){
-	a[0] = GameUtils::command::LEFT;
-	a[1] = GameUtils::command::STOP;
-	a[2] = GameUtils::command::RIGHT;
+std::ostream& operator<<(std::ostream& out, const Mdp::State value){
+    static std::map<Mdp::State, std::string> strings;
+    if (strings.size() == 0){
+#define INSERT_ELEMENT(p) strings[p] = #p
+        INSERT_ELEMENT(Mdp::State::C);
+        INSERT_ELEMENT(Mdp::State::DL);
+        INSERT_ELEMENT(Mdp::State::DR);
+        INSERT_ELEMENT(Mdp::State::UL);
+        INSERT_ELEMENT(Mdp::State::UR);
+        INSERT_ELEMENT(Mdp::State::GO);
+#undef INSERT_ELEMENT
+    }
 
+    return out << strings[value];
+}
+
+std::ostream& operator<<(std::ostream& out, const Mdp::Actions value){
+    static std::map<Mdp::Actions, std::string> strings;
+    if (strings.size() == 0){
+#define INSERT_ELEMENT(p) strings[p] = #p
+        INSERT_ELEMENT(Mdp::Actions::LEFT);
+        INSERT_ELEMENT(Mdp::Actions::STOP);
+        INSERT_ELEMENT(Mdp::Actions::RIGHT);
+#undef INSERT_ELEMENT
+    }
+
+    return out << strings[value];
+}
+
+Mdp::Mdp() : V_old(0.0), Delta(std::numeric_limits<float>::max()), cicle_end(false), gamma(1), theta(0.1), iter(0){
+
+	report.open("report.txt");
+
+	a[Actions::LEFT] = GameUtils::command::LEFT;
+	a[Actions::STOP] = GameUtils::command::STOP;
+	a[Actions::RIGHT] = GameUtils::command::RIGHT;
 
 	V[State::C] = 0.0;
 	V[State::UL] = 0.0;
@@ -29,12 +60,12 @@ Mdp::Mdp() : V_old(0.0), Delta(std::numeric_limits<float>::max()), cicle_end(fal
 	V[State::DR] = 0.0;
 	V[State::GO] = 0.0;
 
-	policy[State::C] = a[1];
-	policy[State::UL] = a[1];
-	policy[State::UR] = a[1];
-	policy[State::DL] = a[1];
-	policy[State::DR] = a[1];
-	policy[State::GO] = a[1];
+	policy[State::C] = a[Actions::STOP];
+	policy[State::UL] = a[Actions::STOP];
+	policy[State::UR] = a[Actions::STOP];
+	policy[State::DL] = a[Actions::STOP];
+	policy[State::DR] = a[Actions::STOP];
+	policy[State::GO] = a[Actions::STOP];
 
 	/*0-center --> stop*/
 	mdp.insert(pair<tuple<int, int>, tuple< float, int, int>>(make_tuple(State::C, GameUtils::command::STOP), make_tuple(0.0526315, State::C, 0)));
@@ -94,7 +125,9 @@ bool Mdp::valueIterationAlgorithm(){
 }
 
 void Mdp::updateValueIteration(){
-	cout << "inizio iterazione" << endl;
+	cout << "inizio iterazione " << iter << endl;
+	report << "inizio iterazione " << iter << endl;
+
 	Delta = 0.0;
 	map<int, float>::iterator i;
 	for (i = V.begin(); i!=V.end(); i++){
@@ -114,9 +147,12 @@ void Mdp::updateValueIteration(){
 		i->second = max(max(sum[0], sum[1]) , sum[2]);	//update V[s]
 		Delta = max(Delta, abs(V_old - V[s]));
 
-		cout << "V(" << i->first << ") : " << i->second << endl;
+		cout << "V(" << (State) i->first << ") : " << i->second << endl;
+		report << "V(" << (State) i->first << ") : " << i->second << endl;
 	}
 	cout << "fine iterazione" << endl;
+	report << "fine iterazione" << endl;
+	iter++;
 }
 
 void Mdp::createPolicy(){
@@ -146,9 +182,10 @@ void Mdp::createPolicy(){
 			}
 		}
 		policy[s] = aMax;
-		cout << "Policy[" << s << "] = " << policy[s] << endl;
+		cout << "Policy[" << (State) s << "] = " << (Actions) policy[s] << endl;
+		report << "Policy[" << (State) s << "] = " << (Actions) policy[s] << endl;
 	}
-
+	report.close();
 }
 
 int Mdp::getCommandFromPolicy(int current_State){

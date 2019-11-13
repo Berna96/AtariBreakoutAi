@@ -8,6 +8,7 @@
 #ifndef AI_MDP_H_
 #define AI_MDP_H_
 #include<iostream>
+#include <fstream>
 #include<tuple>
 #include<list>
 #include <map>
@@ -23,11 +24,14 @@ private:
 	int a[3];
 	bool cicle_end;
 	float gamma, theta;
+	int iter;
+	ofstream report;
 	void updateValueIteration();
 	void createPolicy();
 
 public:
 	enum State {C, UL, UR, DL, DR, GO};
+	enum Actions {LEFT, STOP, RIGHT};
 	Mdp();
 	bool valueIterationAlgorithm();
 	int getCommandFromPolicy(int);

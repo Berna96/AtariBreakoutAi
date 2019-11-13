@@ -29,7 +29,7 @@ void Brick::onCollisionEnter(const GameObject*){
 	//std::cout << life << std::endl;
 	life--;
 	if (life == 0){
-		std::cout << life << std::endl;
+		//std::cout << life << std::endl;
 		GameUtils::GAMEPOINTS += reward;
 		std::string tmp = "BRICK";
 		GameUtils::BRICK = tmp.append(std::to_string(row * 10 + index));

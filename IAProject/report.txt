@@ -1,0 +1,310 @@
+inizio iterazione 0
+V(Mdp::State::C) : -0.45
+V(Mdp::State::UL) : -0.045
+V(Mdp::State::UR) : -0.045
+V(Mdp::State::DL) : -6.54828
+V(Mdp::State::DR) : -6.54828
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 1
+V(Mdp::State::C) : -3.46198
+V(Mdp::State::UL) : -0.386698
+V(Mdp::State::UR) : -0.386698
+V(Mdp::State::DL) : -8.78823
+V(Mdp::State::DR) : -8.78823
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 2
+V(Mdp::State::C) : -4.92491
+V(Mdp::State::UL) : -0.840519
+V(Mdp::State::UR) : -0.840519
+V(Mdp::State::DL) : -9.58427
+V(Mdp::State::DR) : -9.58427
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 3
+V(Mdp::State::C) : -5.63365
+V(Mdp::State::UL) : -1.31983
+V(Mdp::State::UR) : -1.31983
+V(Mdp::State::DL) : -9.8802
+V(Mdp::State::DR) : -9.8802
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 4
+V(Mdp::State::C) : -6.05338
+V(Mdp::State::UL) : -1.79319
+V(Mdp::State::UR) : -1.79319
+V(Mdp::State::DL) : -10.001
+V(Mdp::State::DR) : -10.001
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 5
+V(Mdp::State::C) : -6.36272
+V(Mdp::State::UL) : -2.25014
+V(Mdp::State::UR) : -2.25014
+V(Mdp::State::DL) : -10.0598
+V(Mdp::State::DR) : -10.0598
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 6
+V(Mdp::State::C) : -6.62575
+V(Mdp::State::UL) : -2.6877
+V(Mdp::State::UR) : -2.6877
+V(Mdp::State::DL) : -10.0962
+V(Mdp::State::DR) : -10.0962
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 7
+V(Mdp::State::C) : -6.86533
+V(Mdp::State::UL) : -3.10546
+V(Mdp::State::UR) : -3.10546
+V(Mdp::State::DL) : -10.124
+V(Mdp::State::DR) : -10.124
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 8
+V(Mdp::State::C) : -7.0898
+V(Mdp::State::UL) : -3.5039
+V(Mdp::State::UR) : -3.5039
+V(Mdp::State::DL) : -10.1481
+V(Mdp::State::DR) : -10.1481
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 9
+V(Mdp::State::C) : -7.30239
+V(Mdp::State::UL) : -3.88375
+V(Mdp::State::UR) : -3.88375
+V(Mdp::State::DL) : -10.1703
+V(Mdp::State::DR) : -10.1703
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 10
+V(Mdp::State::C) : -7.50455
+V(Mdp::State::UL) : -4.24583
+V(Mdp::State::UR) : -4.24583
+V(Mdp::State::DL) : -10.1911
+V(Mdp::State::DR) : -10.1911
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 11
+V(Mdp::State::C) : -7.69707
+V(Mdp::State::UL) : -4.59095
+V(Mdp::State::UR) : -4.59095
+V(Mdp::State::DL) : -10.2108
+V(Mdp::State::DR) : -10.2108
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 12
+V(Mdp::State::C) : -7.88051
+V(Mdp::State::UL) : -4.91991
+V(Mdp::State::UR) : -4.91991
+V(Mdp::State::DL) : -10.2296
+V(Mdp::State::DR) : -10.2296
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 13
+V(Mdp::State::C) : -8.05533
+V(Mdp::State::UL) : -5.23345
+V(Mdp::State::UR) : -5.23345
+V(Mdp::State::DL) : -10.2475
+V(Mdp::State::DR) : -10.2475
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 14
+V(Mdp::State::C) : -8.22195
+V(Mdp::State::UL) : -5.5323
+V(Mdp::State::UR) : -5.5323
+V(Mdp::State::DL) : -10.2645
+V(Mdp::State::DR) : -10.2645
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 15
+V(Mdp::State::C) : -8.38077
+V(Mdp::State::UL) : -5.81715
+V(Mdp::State::UR) : -5.81715
+V(Mdp::State::DL) : -10.2808
+V(Mdp::State::DR) : -10.2808
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 16
+V(Mdp::State::C) : -8.53214
+V(Mdp::State::UL) : -6.08864
+V(Mdp::State::UR) : -6.08864
+V(Mdp::State::DL) : -10.2962
+V(Mdp::State::DR) : -10.2962
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 17
+V(Mdp::State::C) : -8.67642
+V(Mdp::State::UL) : -6.34742
+V(Mdp::State::UR) : -6.34742
+V(Mdp::State::DL) : -10.311
+V(Mdp::State::DR) : -10.311
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 18
+V(Mdp::State::C) : -8.81393
+V(Mdp::State::UL) : -6.59407
+V(Mdp::State::UR) : -6.59407
+V(Mdp::State::DL) : -10.3251
+V(Mdp::State::DR) : -10.3251
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 19
+V(Mdp::State::C) : -8.94501
+V(Mdp::State::UL) : -6.82917
+V(Mdp::State::UR) : -6.82917
+V(Mdp::State::DL) : -10.3385
+V(Mdp::State::DR) : -10.3385
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 20
+V(Mdp::State::C) : -9.06994
+V(Mdp::State::UL) : -7.05324
+V(Mdp::State::UR) : -7.05324
+V(Mdp::State::DL) : -10.3512
+V(Mdp::State::DR) : -10.3512
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 21
+V(Mdp::State::C) : -9.18901
+V(Mdp::State::UL) : -7.26682
+V(Mdp::State::UR) : -7.26682
+V(Mdp::State::DL) : -10.3634
+V(Mdp::State::DR) : -10.3634
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 22
+V(Mdp::State::C) : -9.30251
+V(Mdp::State::UL) : -7.47039
+V(Mdp::State::UR) : -7.47039
+V(Mdp::State::DL) : -10.375
+V(Mdp::State::DR) : -10.375
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 23
+V(Mdp::State::C) : -9.41069
+V(Mdp::State::UL) : -7.66442
+V(Mdp::State::UR) : -7.66442
+V(Mdp::State::DL) : -10.3861
+V(Mdp::State::DR) : -10.3861
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 24
+V(Mdp::State::C) : -9.5138
+V(Mdp::State::UL) : -7.84936
+V(Mdp::State::UR) : -7.84936
+V(Mdp::State::DL) : -10.3966
+V(Mdp::State::DR) : -10.3966
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 25
+V(Mdp::State::C) : -9.61208
+V(Mdp::State::UL) : -8.02563
+V(Mdp::State::UR) : -8.02563
+V(Mdp::State::DL) : -10.4067
+V(Mdp::State::DR) : -10.4067
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 26
+V(Mdp::State::C) : -9.70575
+V(Mdp::State::UL) : -8.19364
+V(Mdp::State::UR) : -8.19364
+V(Mdp::State::DL) : -10.4163
+V(Mdp::State::DR) : -10.4163
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 27
+V(Mdp::State::C) : -9.79503
+V(Mdp::State::UL) : -8.35378
+V(Mdp::State::UR) : -8.35378
+V(Mdp::State::DL) : -10.4254
+V(Mdp::State::DR) : -10.4254
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 28
+V(Mdp::State::C) : -9.88013
+V(Mdp::State::UL) : -8.50641
+V(Mdp::State::UR) : -8.50641
+V(Mdp::State::DL) : -10.4341
+V(Mdp::State::DR) : -10.4341
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 29
+V(Mdp::State::C) : -9.96124
+V(Mdp::State::UL) : -8.6519
+V(Mdp::State::UR) : -8.6519
+V(Mdp::State::DL) : -10.4424
+V(Mdp::State::DR) : -10.4424
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 30
+V(Mdp::State::C) : -10.0386
+V(Mdp::State::UL) : -8.79056
+V(Mdp::State::UR) : -8.79056
+V(Mdp::State::DL) : -10.4503
+V(Mdp::State::DR) : -10.4503
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 31
+V(Mdp::State::C) : -10.1122
+V(Mdp::State::UL) : -8.92273
+V(Mdp::State::UR) : -8.92273
+V(Mdp::State::DL) : -10.4578
+V(Mdp::State::DR) : -10.4578
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 32
+V(Mdp::State::C) : -10.1825
+V(Mdp::State::UL) : -9.0487
+V(Mdp::State::UR) : -9.0487
+V(Mdp::State::DL) : -10.465
+V(Mdp::State::DR) : -10.465
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 33
+V(Mdp::State::C) : -10.2494
+V(Mdp::State::UL) : -9.16878
+V(Mdp::State::UR) : -9.16878
+V(Mdp::State::DL) : -10.4719
+V(Mdp::State::DR) : -10.4719
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 34
+V(Mdp::State::C) : -10.3132
+V(Mdp::State::UL) : -9.28322
+V(Mdp::State::UR) : -9.28322
+V(Mdp::State::DL) : -10.4784
+V(Mdp::State::DR) : -10.4784
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 35
+V(Mdp::State::C) : -10.374
+V(Mdp::State::UL) : -9.3923
+V(Mdp::State::UR) : -9.3923
+V(Mdp::State::DL) : -10.4846
+V(Mdp::State::DR) : -10.4846
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 36
+V(Mdp::State::C) : -10.432
+V(Mdp::State::UL) : -9.49627
+V(Mdp::State::UR) : -9.49627
+V(Mdp::State::DL) : -10.4905
+V(Mdp::State::DR) : -10.4905
+V(Mdp::State::GO) : 0
+fine iterazione
+inizio iterazione 37
+V(Mdp::State::C) : -10.4873
+V(Mdp::State::UL) : -9.59537
+V(Mdp::State::UR) : -9.59537
+V(Mdp::State::DL) : -10.4962
+V(Mdp::State::DR) : -10.4962
+V(Mdp::State::GO) : 0
+fine iterazione
+Policy[Mdp::State::C] = Mdp::Actions::RIGHT
+Policy[Mdp::State::UL] = Mdp::Actions::LEFT
+Policy[Mdp::State::UR] = Mdp::Actions::RIGHT
+Policy[Mdp::State::DL] = Mdp::Actions::LEFT
+Policy[Mdp::State::DR] = Mdp::Actions::RIGHT
+Policy[Mdp::State::GO] = Mdp::Actions::RIGHT

@@ -23,9 +23,6 @@ GameOver::GameOver(bool ai) : ai(ai){
 	}
 	str_text.append("\nPoints : ");
 	str_text.append(std::to_string(GameUtils::GAMEPOINTS));
-	if (ai){
-
-	}
 }
 
 void GameOver::update(Keyboard::Key& key){
